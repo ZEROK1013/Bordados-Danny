@@ -14,7 +14,7 @@ contactForm.addEventListener("submit", async (event) => {
     return;
   }
 
-  formMessage.textContent = "Enviando informacion...";
+  formMessage.textContent = "Enviando información...";
 
   try {
     const response = await fetch(formEndpoint, {
@@ -32,6 +32,6 @@ contactForm.addEventListener("submit", async (event) => {
     formMessage.textContent = `Gracias, ${nombre} ${apellido}. Recibimos tus datos y pronto podremos contactarte.`;
     contactForm.reset();
   } catch (error) {
-    formMessage.textContent = "No se pudo enviar el formulario. Intenta por WhatsApp o correo electronico.";
+    formMessage.textContent = "No se pudo enviar el formulario. Intenta por WhatsApp o correo electrónico.";
   }
 });
