@@ -490,29 +490,44 @@ input:focus {
 
 @media (max-width: 560px) {
   .site-header {
-    gap: 0.75rem;
-    padding: 0.8rem 1rem;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.65rem;
+    padding: 0.55rem 0.75rem;
   }
 
   .main-nav {
-    justify-content: space-between;
-    font-size: 0.88rem;
+    grid-column: auto;
+    justify-content: flex-end;
+    gap: 0;
+    width: auto;
+    padding-bottom: 0;
+    overflow: visible;
+    font-size: 0.84rem;
   }
 
   .brand {
-    font-size: 0.96rem;
+    gap: 0;
   }
 
   .brand-mark {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 1.95rem;
+    height: 1.95rem;
+    font-size: 0.72rem;
     flex: 0 0 auto;
   }
 
+  .brand span:last-child,
+  .main-nav a[href="#trabajos"] {
+    display: none;
+  }
+
   .header-cta {
-    min-height: 2.45rem;
-    padding: 0.62rem 0.85rem;
-    font-size: 0.9rem;
+    min-height: 2.1rem;
+    padding: 0.4rem 0;
+    color: var(--muted);
+    background: transparent;
+    font-size: 0.84rem;
+    box-shadow: none;
   }
 
   .hero {
@@ -566,11 +581,15 @@ input:focus {
 
 @media (max-width: 380px) {
   .site-header {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .main-nav {
+    grid-column: auto;
   }
 
   .header-cta {
-    width: 100%;
+    width: auto;
   }
 
   .hero-actions {
