@@ -20,6 +20,9 @@ El sitio se publica mediante GitHub y Cloudflare Pages.
 - `styles.css`: estilos visuales y responsive.
 - `script.js`: comportamiento interactivo del sitio.
 - `assets/`: imágenes y recursos del sitio.
+  - `assets/bordados/`: fotos de trabajos de bordado.
+  - `assets/parches/`: fotos de parches bordados.
+  - `assets/shared/`: imágenes generales reutilizadas por el sitio.
 - `AGENTS.md`: instrucciones permanentes de trabajo para Codex y otros agentes.
 
 ## Probar localmente
