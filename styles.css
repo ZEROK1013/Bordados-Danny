@@ -542,6 +542,30 @@ h3 {
   padding: clamp(3.5rem, 8vw, 6.5rem) clamp(1rem, 4vw, 4.5rem);
 }
 
+.page-contact {
+  border-top: 1px solid var(--line);
+}
+
+.embroidery-contact {
+  background:
+    linear-gradient(135deg, rgba(10, 97, 104, 0.08), rgba(255, 255, 255, 0.76) 46%),
+    #fffaf2;
+}
+
+.patch-contact {
+  background:
+    linear-gradient(135deg, rgba(217, 93, 66, 0.1), rgba(255, 255, 255, 0.82) 48%),
+    #faf7f0;
+}
+
+.page-contact-form {
+  border-top: 0.35rem solid var(--teal);
+}
+
+.patch-contact .page-contact-form {
+  border-top-color: var(--coral);
+}
+
 .contact-form {
   display: grid;
   min-width: 0;
