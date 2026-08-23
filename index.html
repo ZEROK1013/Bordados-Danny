@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bordados Danny | Bordados personalizados</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Inicio Bordados Danny">
+      <span class="brand-mark">BD</span>
+      <span>Bordados Danny</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegacion principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">Bordado textil personalizado</p>
+        <h1>Bordados Danny</h1>
+        <p class="hero-copy">
+          Creamos bordados personalizados para playeras, uniformes, prendas especiales y parches de ropa con acabados resistentes y detalles precisos.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#contacto">Solicitar cotizacion</a>
+          <a class="button secondary" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div>
+        <p class="eyebrow">Hecho con hilo, cuidado y tecnica</p>
+        <h2>Disenos que se sienten en la tela</h2>
+      </div>
+      <p>
+        En Bordados Danny transformamos ideas, nombres, logotipos y disenos en piezas bordadas listas para usar o regalar. Trabajamos cada prenda pensando en su textura, color y uso diario.
+      </p>
+    </section>
+
+    <section class="section services" id="servicios">
+      <div class="section-heading">
+        <p class="eyebrow">Servicios</p>
+        <h2>Soluciones para prendas y parches</h2>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <span class="service-icon">01</span>
+          <h3>Playeras bordadas</h3>
+          <p>Personalizacion de playeras con nombres, frases, detalles decorativos o disenos para negocio.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon">02</span>
+          <h3>Parches de ropa</h3>
+          <p>Parches bordados para chamarras, mochilas, gorras, uniformes y prendas especiales.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon">03</span>
+          <h3>Uniformes y logos</h3>
+          <p>Bordado de logotipos para equipos, negocios, eventos, escuelas y proyectos personales.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="work-band" id="trabajos">
+      <div class="work-copy">
+        <p class="eyebrow">Acabado profesional</p>
+        <h2>Tu diseno, listo para vestir</h2>
+        <p>
+          Preparamos cada pieza para que el bordado combine con la prenda, conserve buen contraste y mantenga una apariencia limpia.
+        </p>
+      </div>
+
+      <div class="work-list" aria-label="Tipos de trabajos">
+        <div>
+          <strong>Nombres y frases</strong>
+          <span>Detalles personalizados para regalos o prendas familiares.</span>
+        </div>
+        <div>
+          <strong>Disenos decorativos</strong>
+          <span>Flores, figuras, iniciales y motivos especiales.</span>
+        </div>
+        <div>
+          <strong>Identidad de negocio</strong>
+          <span>Logos bordados para uniformes y equipo de trabajo.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="contact-copy">
+        <p class="eyebrow">Contacto</p>
+        <h2>Cuentanos que quieres bordar</h2>
+        <p>
+          Completa el formulario y comparte tus datos para preparar una cotizacion o resolver dudas sobre tu pedido.
+        </p>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="given-name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" autocomplete="family-name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" name="correo" autocomplete="email" required>
+        </div>
+
+        <div class="form-row">
+          <label for="telefono">Numero telefonico</label>
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" required>
+        </div>
+
+        <button class="button primary form-button" type="submit">Enviar mensaje</button>
+        <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Bordados Danny</p>
+    <span>Bordados personalizados en playeras, parches y prendas textiles.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
