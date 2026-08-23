@@ -110,37 +110,51 @@
         </p>
 
         <div class="contact-details" aria-label="Datos de contacto">
-          <div>
+          <a class="contact-card" href="https://wa.me/525527224402?text=Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n." target="_blank" rel="noopener">
             <span>WhatsApp</span>
-            <a href="https://wa.me/525527224402?text=Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n." target="_blank" rel="noopener">5527224402</a>
-          </div>
-          <div>
+            <strong>5527224402</strong>
+            <small>Abrir chat</small>
+          </a>
+          <a class="contact-card" href="mailto:bordadosdann@hotmail.com">
             <span>Correo electrónico</span>
-            <a href="mailto:bordadosdann@hotmail.com">bordadosdann@hotmail.com</a>
-          </div>
+            <strong>bordadosdann@hotmail.com</strong>
+            <small>Enviar correo</small>
+          </a>
         </div>
 
       </div>
 
       <form class="contact-form" id="contactForm" action="https://formspree.io/f/mwlezjao" method="POST" data-form-endpoint="https://formspree.io/f/mwlezjao">
-        <div class="form-row">
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" autocomplete="given-name" required>
+        <div class="form-header">
+          <p class="eyebrow">Solicitud</p>
+          <h3>Datos para cotizar</h3>
         </div>
 
-        <div class="form-row">
-          <label for="apellido">Apellido</label>
-          <input type="text" id="apellido" name="apellido" autocomplete="family-name" required>
-        </div>
+        <div class="form-grid">
+          <div class="form-row">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="given-name" required>
+          </div>
 
-        <div class="form-row">
-          <label for="correo">Correo</label>
-          <input type="email" id="correo" name="email" autocomplete="email" required>
-        </div>
+          <div class="form-row">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" autocomplete="family-name" required>
+          </div>
 
-        <div class="form-row">
-          <label for="telefono">Número telefónico</label>
-          <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" required>
+          <div class="form-row form-row-full">
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-row form-row-full">
+            <label for="telefono">Número telefónico</label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" required>
+          </div>
+
+          <div class="form-row form-row-full">
+            <label for="comentario">Comentario <span class="optional-label">(opcional)</span></label>
+            <textarea id="comentario" name="comentario" rows="4"></textarea>
+          </div>
         </div>
 
         <button class="button primary form-button" type="submit">Enviar mensaje</button>

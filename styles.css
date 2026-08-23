@@ -331,7 +331,7 @@ h3 {
 .contact-form {
   display: grid;
   min-width: 0;
-  gap: 1rem;
+  gap: 1.15rem;
   padding: clamp(1rem, 3vw, 1.5rem);
   border: 1px solid var(--line);
   border-radius: 0.5rem;
@@ -339,39 +339,87 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+.form-header {
+  display: grid;
+  gap: 0.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.form-header h3 {
+  margin: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.form-row-full {
+  grid-column: 1 / -1;
+}
+
 .contact-details {
   display: grid;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
+  gap: 0.9rem;
+  margin-top: 1.75rem;
 }
 
-.contact-details div {
+.contact-card {
+  position: relative;
   display: grid;
-  gap: 0.15rem;
-  padding: 1rem;
+  gap: 0.22rem;
+  padding: 1.1rem 3.25rem 1.1rem 1rem;
   border: 1px solid var(--line);
   border-radius: 0.5rem;
-  background: rgba(255, 255, 255, 0.64);
-  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 10px 28px rgba(31, 35, 35, 0.05);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease, background 160ms ease;
 }
 
-.contact-details span {
+.contact-card::after {
+  content: ">";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--white);
+  background: var(--teal);
+  font-weight: 800;
+  transform: translateY(-50%);
+}
+
+.contact-card span {
   color: var(--muted);
   font-size: 0.86rem;
   font-weight: 800;
   text-transform: uppercase;
 }
 
-.contact-details a {
+.contact-card strong {
   color: var(--teal-dark);
   font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 800;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
 }
 
-.contact-details div:hover,
-.contact-details div:focus-within {
+.contact-card small {
+  color: var(--coral);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.contact-card:hover,
+.contact-card:focus {
   border-color: var(--teal);
-  box-shadow: 0 12px 32px rgba(10, 97, 104, 0.12);
+  background: var(--white);
+  box-shadow: 0 16px 36px rgba(10, 97, 104, 0.14);
   transform: translateY(-1px);
 }
 
@@ -386,7 +434,8 @@ label {
   font-size: 0.92rem;
 }
 
-input {
+input,
+textarea {
   width: 100%;
   min-height: 3rem;
   padding: 0.8rem 0.9rem;
@@ -397,9 +446,20 @@ input {
   font: inherit;
 }
 
-input:focus {
+textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
   outline: 3px solid rgba(10, 97, 104, 0.16);
   border-color: var(--teal);
+}
+
+.optional-label {
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .form-button {
@@ -490,15 +550,15 @@ input:focus {
 
 @media (max-width: 560px) {
   .site-header {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 0.65rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.35rem;
     padding: 0.55rem 0.75rem;
   }
 
   .main-nav {
     grid-column: auto;
-    justify-content: flex-end;
-    gap: 0;
+    justify-content: center;
+    min-width: 0;
     width: auto;
     padding-bottom: 0;
     overflow: visible;
@@ -506,13 +566,14 @@ input:focus {
   }
 
   .brand {
+    justify-content: flex-start;
     gap: 0;
   }
 
   .brand-mark {
-    width: 1.95rem;
-    height: 1.95rem;
-    font-size: 0.72rem;
+    width: 2.15rem;
+    height: 2.15rem;
+    font-size: 0.78rem;
     flex: 0 0 auto;
   }
 
@@ -522,6 +583,7 @@ input:focus {
   }
 
   .header-cta {
+    justify-self: end;
     min-height: 2.1rem;
     padding: 0.4rem 0;
     color: var(--muted);
@@ -563,8 +625,12 @@ input:focus {
 
   .service-card,
   .contact-form,
-  .contact-details div {
+  .contact-card {
     padding: 1rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
   }
 
   .site-footer {
@@ -581,7 +647,8 @@ input:focus {
 
 @media (max-width: 380px) {
   .site-header {
-    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-columns: 0.8fr 1fr 1fr;
+    padding-inline: 0.6rem;
   }
 
   .main-nav {
