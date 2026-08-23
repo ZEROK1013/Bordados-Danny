@@ -320,6 +320,56 @@ h3 {
   color: rgba(255, 255, 255, 0.74);
 }
 
+.work-gallery {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.work-photo {
+  display: grid;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.16);
+}
+
+.work-photo img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.work-photo.featured {
+  grid-column: span 2;
+}
+
+.work-photo figcaption {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.9rem;
+}
+
+.work-photo strong,
+.work-photo span {
+  display: block;
+}
+
+.work-photo strong {
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.work-photo span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
 .contact-section {
   display: grid;
   grid-template-columns: minmax(0, 0.75fr) minmax(20rem, 0.65fr);
@@ -394,6 +444,14 @@ h3 {
   transform: translateY(-50%);
 }
 
+.facebook-card::after {
+  content: "f";
+  background: #1877f2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
 .contact-card span {
   color: var(--muted);
   font-size: 0.86rem;
@@ -421,6 +479,12 @@ h3 {
   background: var(--white);
   box-shadow: 0 16px 36px rgba(10, 97, 104, 0.14);
   transform: translateY(-1px);
+}
+
+.facebook-card:hover,
+.facebook-card:focus {
+  border-color: #1877f2;
+  box-shadow: 0 16px 36px rgba(24, 119, 242, 0.16);
 }
 
 .form-row {
@@ -492,6 +556,13 @@ textarea:focus {
   font-weight: 800;
 }
 
+.site-footer a {
+  color: var(--white);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .floating-whatsapp {
   position: fixed;
   right: 1rem;
@@ -541,6 +612,10 @@ textarea:focus {
   .work-band,
   .contact-section {
     grid-template-columns: 1fr;
+  }
+
+  .work-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .service-card {
@@ -619,6 +694,14 @@ textarea:focus {
   .work-band,
   .contact-section {
     padding: 3rem 1rem;
+  }
+
+  .work-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .work-photo.featured {
+    grid-column: auto;
   }
 
   .button {
